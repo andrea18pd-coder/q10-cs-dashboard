@@ -939,13 +939,13 @@ else:
     df_topics, labels_info, err = build_topic_summary(desc, n_topics=6, top_terms=10, top_bigrams=6, examples_per_topic=4)
 
     if err is None and df_topics is not None and labels_info is not None:
-        st.markdown("### Resumen ejecutivo")
+        st.markdown("### Resumen")
         st.write(breeze_like_summary(df_topics))
 
         colT1, colT2 = st.columns([1.35, 1.0])
 
         with colT1:
-            st.markdown("**Tópicos (TF-IDF + KMeans) con título sugerido + ejemplos**")
+            st.markdown("**Tópicos con título sugerido + ejemplos**")
             st.dataframe(df_topics, use_container_width=True, height=360)
 
         with colT2:
@@ -1005,7 +1005,6 @@ st.dataframe(
 st.caption(
     "Notas: Tickets entrados/cerrados usan columnas de pipeline (Nuevo/Cerrado). "
     "SLA es horas hábiles entre ENTRADO->CERRADO. "
-    "CSAT es % Top-Box (4-5). "
     "Texto ML usa Módulo + Asunto + cuerpo limpio (sin saludos/despedidas) y filtra adjuntos/links/identificadores (CE/BD/udbz/números largos). "
-    "Responsables normalizados a: Ana, Helen, Valentina, Edwyn, Robinson."
 )
+
