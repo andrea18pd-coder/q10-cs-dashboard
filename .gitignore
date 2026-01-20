@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# === Q10 - Archivos sensibles / datos locales ===
+*.xlsx
+*.csv
+*.parquet
+
+# Variables de entorno
+.env
+
+# Secrets de Streamlit
+.streamlit/secrets.toml
+
+# Archivos de configuración locales
+config.toml
