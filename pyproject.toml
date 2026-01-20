@@ -10,3 +10,5 @@ dependencies = [
   "openpyxl",
   "scikit-learn"
 ]
+[tool.poetry]
+package-mode = false
